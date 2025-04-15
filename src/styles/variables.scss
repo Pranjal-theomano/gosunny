@@ -1,0 +1,37 @@
+/* Variables for font, colors etc */
+
+/* colors */
+$primary-color:#008080;
+$light-primary-color:#4ca6a6;
+$progress-bar-done:#b5d8cc;
+$logoBgColor : #223844;
+$form-label-color:#212121;
+$checkbox-label-color:#181D27;
+$chat-input-bgColor:#f5f5f5;
+$chat-user-text-color: #073131;
+$chat-bot-text-color: #000;
+$input-placeholder-color : #444444;
+$button-disabled-color : #0080809e;
+$toogle-button-color : #E9EAEB;
+$checkbox-input-color : #63807F;
+$ul-modal-color : #333333;
+$navbar-text-color : #222222;
+$navbar-bg-color : #84A39E;
+$navbar-stage-border-color : #DAECEA;
+$navbar-text-color-incomplete-stage : #6b6b6b;
+$light-primary-body-color: #EDF6F3;
+$breakpoints: (
+  "tablet": "(max-width: 992px)",  // Tablets & Smaller Screens
+  "mobile": "(max-width: 743px)"   // Mobile
+);
+
+@mixin respond($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media #{map-get($breakpoints, $breakpoint)} {
+      @content;
+    }
+  } @else {
+    @warn "🚨 Warning: Breakpoint `#{$breakpoint}` not found!";
+  }
+}
+

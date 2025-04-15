@@ -1,0 +1,24 @@
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+$xl2: 1024px;
+
+@mixin responsMin($breakpoint) {
+    @media (min-width: $breakpoint) {
+        @content;
+    }
+}
+
+@mixin responsMax($breakpoint) {
+    @media (max-width: $breakpoint) {
+        @content;
+    }
+}
+
+// Mixin for range between min and max width
+@mixin responsBetween($minBreakpoint, $maxBreakpoint) {
+    @media (min-width: $minBreakpoint) and (max-width: $maxBreakpoint) {
+        @content;
+    }
+}

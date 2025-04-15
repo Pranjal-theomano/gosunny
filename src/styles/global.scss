@@ -1,0 +1,79 @@
+/* Global and Shared Styles */
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+@import "./variables";
+@import "./override_bootstrap.scss";
+@import "./mixins";
+
+* {
+  -moz-font-smoothing: none;
+  font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
+}
+
+.ai-audio-iframe {
+  position: absolute;
+  top: 0;
+
+  left: 0;
+  width: 100%;
+  background-color: #ccc;
+  height: 100%;
+  opacity: 0;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", serif;
+  overflow: hidden;
+  font-family: "Inter", serif;
+  // overflow: hidden;
+}
+
+.themedForm {
+  .form-check-input {
+    border: 1px solid $primary-color !important; /* Change to your preferred color */
+    background-color: $light-primary-body-color;
+    &:checked {
+      background-color: $primary-color;
+      border-color: $light-primary-color;
+    }
+  }
+}
+
+#root {
+  height: 100vh;
+  @include respond("tablet") {
+    background-color: white;
+  }
+  @include respond("mobile") {
+    min-height: 100vh;
+  }
+}
+
+@include responsBetween($md, $xl2) {
+  .initialmodal.modal {
+    .modal-dialog {
+      margin: 0 !important;
+      margin-left: auto !important;
+    }
+
+    .modal-content {
+      height: 100vh;
+      border-top-right-radius: 0 !important;
+      border-bottom-right-radius: 0 !important;
+    }
+  }
+}
+
+@include responsMax($md) {
+  .initialmodal.modal {
+    .modal-content {
+      height: 100vh;
+    }
+  }
+}

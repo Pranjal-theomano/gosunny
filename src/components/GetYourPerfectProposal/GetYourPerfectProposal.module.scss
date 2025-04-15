@@ -1,0 +1,197 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixins";
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.156); // Adds a dark transparent effect
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+}
+
+.loader-wrapper {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translateX(-50%);
+
+}
+
+.get-approved-modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 35%;
+    height: 100%;
+    background-color: white;
+    box-shadow: -2px 0px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    transition: right 0.5s ease-in-out;
+    padding: 20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    padding-top: 60px;
+
+    .close-button {
+        position: absolute;
+        top: 16px;
+        right: 16px;
+        font-size: 30px;
+        font-weight: bold;
+        img {
+            width: 40px;
+            height: 40px;
+        }
+    }
+
+    .form-input {
+        background-image: none !important;
+    }
+
+    .form-input:valid {
+        border-color: revert-layer !important;
+    }
+
+    .form-input:valid:focus {
+        border-color: revert-layer !important;
+        box-shadow: revert-layer !important;
+    }
+
+    .form-feedback {
+        font-size: 0.75rem;
+    }
+
+    input::placeholder {
+        color: $input-placeholder-color;
+        opacity: 1;
+    }
+
+    .heading-text {
+        font-size: 1.5rem;
+        font-weight: 700;
+    }
+
+    .sub-heading-text {
+        font-size: 1rem;
+    }
+
+    .sub-heading-text-span {
+        font-weight: 700;
+    }
+
+    .checkbox-input input {
+        width: 20px;
+        height: 20px;
+        margin-right: 10px;
+        cursor: pointer;
+        border: 1px solid $primary-color !important; /* Change to your preferred color */
+        background-color: $light-primary-body-color;
+        transition: all 0.1s ease-in-out;
+
+        &:checked {
+            background-color: $light-primary-color;
+            border-color: $primary-color;
+        }
+
+        &:disabled{
+            opacity: 0.5;
+        }
+
+        &:checked[type="checkbox"] {
+            --bs-form-check-bg-image: none;
+        }
+    }
+
+    .checkbox-label {
+        font-size: 0.875rem;
+        color: $checkbox-label-color;
+        line-height: 30px;
+    }
+
+    .form-label {
+        font-size: 0.875rem;
+        font-weight: 500;
+        color: $form-label-color;
+    }
+
+    .form-input {
+        background-image: none !important;
+        padding: 0.563rem 0.938rem;
+        border: 1px solid $light-primary-color;
+
+        &:disabled{
+            border-color: #777777;
+            background-color: transparent !important;
+        }
+    }
+
+    .form-input-text {
+        border-color: $progress-bar-done;
+        border-radius: 8px;
+    }
+
+    .form-input-button {
+        background-color: $primary-color;
+        border-radius: 8px;
+        border: none;
+        color: white;
+        font-size: 1rem;
+        font-weight: 600;
+        cursor: pointer;
+        height: 40px;
+        width: 100px;
+
+        &:disabled {
+            // background-color: $button-disabled-color;
+            cursor: not-allowed;
+            opacity: 0.7;
+        }
+    }
+
+    .term-condition-text {
+        font-size: 0.75rem;
+        a {
+            color: $primary-color;
+            text-decoration: none;
+        }
+    }
+
+    @include responsMax(1024px) {
+        width: 58%;
+    }
+
+    @include responsMax(767px) {
+        padding: 15px;
+        padding-top: 60px;
+        width: 100%;
+
+        .heading-text {
+            font-size: 1.125rem;
+        }
+
+        .sub-heading-text {
+            font-size: 0.875rem;
+        }
+
+        .checkbox-label {
+            line-height: 1.125rem;
+        }
+
+        .form-label {
+            font-size: 0.75rem;
+        }
+
+        .form-feedback {
+            line-height: normal;
+        }
+
+        .form-input-button {
+            height: 44px;
+        }
+    }
+}
