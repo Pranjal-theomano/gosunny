@@ -273,7 +273,7 @@ const ChatBox = ({ exampleQuestions = [] }) => {
                 id="chat-user-input"
                 rows={1}
                 className={styles["chat-input-box"] + " w-100"}
-                style={{ width: '400px' }}
+                style={{ width: '380px' }}
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
                 placeholder="Ask anything about solar and this process"
