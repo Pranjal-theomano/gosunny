@@ -10,6 +10,7 @@ import solarPanelImage1 from './assets/solar1.jpg';
 import solarPanelImage2 from './assets/solar2.jpg';
 import solarPanelImage3 from './assets/solar3.jpg';
 import mainlogo from './assets/implogo.png';
+import logo from './assets/logo.png';
 import headerlogo from './assets/header_logo.png';
 import backgroundimage2 from './assets/backgroundimage2.png';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
@@ -42,6 +43,7 @@ function HomePage() {
   });
   const [isLoading, setIsLoading] = useState(false);
   const [showAssessment, setShowAssessment] = useState(false);
+  const [showChatWidget, setShowChatWidget] = useState(false);
 
   const handleSubmit = async (e) => {
     console.log('Form submitted:', formData);
@@ -465,6 +467,33 @@ function HomePage() {
           </div>
         </div>
       </footer>
+
+      <div className="chat-widget">
+        <button 
+          className="chat-widget-button"
+          onClick={() => setShowChatWidget(!showChatWidget)}
+        >
+          <img src={logo} alt="Chat" className="chat-widget-icon" />
+        </button>
+
+        {showChatWidget && (
+          <div className="chat-widget-popup" style={{ position: 'absolute', bottom: '0', right: '0' }}>
+            <div className="chat-widget-header">
+              <img src={logo} alt="SunnyAI" className="chat-header-logo" />
+              <h3>SunnyAI</h3>
+              <button 
+                className="chat-close-button"
+                onClick={() => setShowChatWidget(false)}
+              >
+                ×
+              </button>
+            </div>
+            <div className="chat-widget-content">
+              <ChatBox />
+            </div>
+          </div>
+        )}
+      </div>
     </div>
   );
 }
