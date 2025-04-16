@@ -67,13 +67,13 @@
 }
 
 .bonus {
-  color: #2ecc71;
+  color: #0F8B8D;
   font-weight: 600;
 }
 
 .total-savings {
   font-size: 2rem;
-  color: #2ecc71;
+  color: #0F8B8D;
   margin-top: 1rem;
 }
 
@@ -83,11 +83,11 @@
   padding: 1.5rem;
   border-radius: 8px;
   margin: 1.5rem 0;
-  border: 1px solid #2ecc71;
+  border: 1px solid #0F8B8D;
 }
 
 .highlight {
-  color: #2ecc71;
+  color: #0F8B8D;
   font-weight: 600;
 }
 
@@ -114,7 +114,7 @@
 .number {
   font-size: 3rem;
   font-weight: bold;
-  color: #2ecc71;
+  color: #0F8B8D;
 }
 
 .coverage-circle {
@@ -133,9 +133,9 @@
   justify-content: center;
   font-size: 1.5rem;
   font-weight: bold;
-  color: #2ecc71;
+  color: #0F8B8D;
   background: conic-gradient(
-    #2ecc71 calc(var(--percentage) * 1%),
+    #0F8B8D calc(var(--percentage) * 1%),
     #e0e0e0 calc(var(--percentage) * 1%)
   );
 }
