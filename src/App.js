@@ -40,10 +40,13 @@ function HomePage() {
     address: '',
     electricBill: 200
   });
+  const [isLoading, setIsLoading] = useState(false);
+  const [showAssessment, setShowAssessment] = useState(false);
 
   const handleSubmit = async (e) => {
     console.log('Form submitted:', formData);
     e.preventDefault();
+    setIsLoading(true);
     try {
       const response = await fetch(`${process.env.REACT_APP_BASE_URL}/register_user`, {
         method: 'POST',
@@ -63,16 +66,17 @@ function HomePage() {
         console.log("userId :", userId);
         // console.log("now we can go to chat page")
         // navigate('/chat/' + userId);
-        navigate('/InitialAssesment/' + userId);
+        // navigate('/InitialAssesment/' + userId);
+        setShowAssessment(true);
       } else {
         console.log("Something went wrong!");
-        // TODO: Notify this error through Sentry
         console.error(result.message);
       }
     } catch (error) {
-      // toast.error("Something went wrong!");
       console.log("Something went wrong!");
       console.error(error.message);
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -126,11 +130,26 @@ function HomePage() {
             </div>
           </div>
 
-          <button type="submit" className="submit-button">
-            See My Savings Now
+          <button 
+            type="submit" 
+            disabled={isLoading}
+            className="submit-button"
+          >
+            {isLoading ? (
+              <span className="spinner">Loading...</span>
+            ) : (
+              'See My Savings Now'
+            )}
           </button>
         </form>
+
+        {showAssessment && (
+          <div className="assessment-page">
+            <Assessment />
+          </div>
+        )}
       </main>
+      
       <div className="banner">
         <div className="carousel-container">
           <div className="carousel-slide">
