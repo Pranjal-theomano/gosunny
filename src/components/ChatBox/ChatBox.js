@@ -17,23 +17,13 @@ const ChatBox = ({ exampleQuestions = [] }) => {
   };
   const [messages, setMessages] = useState([initialMessage]);
   const [input, setInput] = useState("");
-  const [defaultMessages, setDefaultMessages] = useState([]);
   const [loading, setLoading] = useState(false);
   const chatBoxRef = useRef(null);
   const chatInputRef = useRef(null);
   const { userId } = useParams();
-  const DEFAULT_MSGS = [
-    "How do you design the system for my home?",
-    "Why are leases the most popular financing option?",
-    "How is your process different than other companies?",
-  ];
 
   const convertGPTMarkdownToHTML = (gptResponse) => {
     return marked.parse(gptResponse);
-  };
-
-  const onDefaultMessageClick = (message) => {
-    sendMessage(message);
   };
 
   const trackResponseInGA = (question, answer) => {
@@ -58,7 +48,7 @@ const ChatBox = ({ exampleQuestions = [] }) => {
         sender: "user",
       },
     ]);
-    setDefaultMessages([]);
+    // setDefaultMessages([]);
     setLoading(true);
     setInput("");
 
@@ -156,10 +146,10 @@ const ChatBox = ({ exampleQuestions = [] }) => {
             sender: chat.role === "user" ? "user" : "bot",
           }));
           setMessages([initialMessage, ...chatHistory]);
-          setDefaultMessages([]);
+          // setDefaultMessages([]);
         } else {
           if (response.status === 404) {
-            setDefaultMessages(DEFAULT_MSGS);
+            // setDefaultMessages(DEFAULT_MSGS);
           }
           console.error("Failed to fetch chat history:", response.status);
         }
@@ -238,28 +228,7 @@ const ChatBox = ({ exampleQuestions = [] }) => {
                 </div>{" "}
               </div>
             )}{" "}
-          </div>{" "}
-          {defaultMessages.map((message, index) => (
-            <div
-              key={index}
-              className={`message ${styles.user} d-flex align-items-start my-2 d-flex flex-row`}
-            >
-              <div
-                className={
-                  styles.userMessagetext + " px-3 py-2 mx-3 cursor-pointer"
-                }
-                style={{
-                  cursor: "pointer",
-                }}
-                onClick={() => onDefaultMessageClick(message)}
-              >
-                <p className={styles.userMessageTextPara + " mb-0"} style={{ padding: '0px 10px' }}>
-                  {" "}
-                  {message}{" "}
-                </p>{" "}
-              </div>{" "}
-            </div>
-          ))}{" "}
+          </div>
           <div className={styles["chat-input"] + " d-flex px-3 mx-3"}>
             <div className="d-flex w-100">
               <textarea
