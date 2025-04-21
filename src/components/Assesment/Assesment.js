@@ -1,7 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Assesment.css';
+import Details from '../Details/Details';
 
 const Assessment = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  
   const savingsData = {
     electricitySavings: { min: 140, max: 420 },
     signupBonus: 3000,
@@ -56,12 +59,16 @@ const Assessment = () => {
           </div>
         </div>
       </div>
+            
+      {/* Add Get Started Button */}
+      <div className="cta-container">
+        <button className="get-started-btn" onClick={() => setIsModalOpen(true)}>
+          Get Started
+        </button>
+      </div>
 
-      {/* Call to Action */}
-      {/* <div className="cta-container">
-        <p>Skip the <span className="highlight">sales calls & fees</span>, finish now in 5 minutes!</p>
-        <button className="finish-proposal-btn">Finish My Proposal!</button>
-      </div> */}
+      {/* Details Modal */}
+      <Details isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </div>
   );
 };

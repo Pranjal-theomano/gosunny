@@ -200,12 +200,7 @@ const ChatBox = ({ exampleQuestions = [] }) => {
                   key={index}
                   className={`message ${styles.bot} d-flex align-items-start my-2`}
                 >
-                  <Image
-                    src={botIcon}
-                    width={"32px"}
-                    height={"32px"}
-                    className={styles.botIcon + " me-2"}
-                  />{" "}
+                  {" "}
                   <div
                     className={styles.botMessagetext + " px-3 py-2"}
                     style={{ padding: '0px 10px' }}
@@ -273,7 +268,7 @@ const ChatBox = ({ exampleQuestions = [] }) => {
                 id="chat-user-input"
                 rows={1}
                 className={styles["chat-input-box"] + " w-100"}
-                style={{ width: '400px' }}
+                style={{ width: '320px' }}
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
                 placeholder="Ask anything about solar and this process"
@@ -283,6 +278,7 @@ const ChatBox = ({ exampleQuestions = [] }) => {
             <div>
               <img
                 src={sendIcon}
+                alt="Send message"
                 onClick={() => {
                   sendMessage(input);
                   chatInputRef.current.value = "";

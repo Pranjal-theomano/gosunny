@@ -139,6 +139,17 @@
     #e0e0e0 calc(var(--percentage) * 1%)
   );
 }
+.get-started-btn {
+  padding: 1rem;
+  background-color: #008080;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
 
 /* Responsive Design */
 @media (max-width: 768px) {
