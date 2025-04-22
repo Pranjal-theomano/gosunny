@@ -213,7 +213,7 @@ function HomePage() {
 
           <div className="comparison-card">
             <h3 className="timeline-heading text-center">
-              Solar on your timeline, not a salesperson's
+              Benifits of solar panel
             </h3>
 
             <div className="comparison-content">
@@ -221,18 +221,16 @@ function HomePage() {
                 <div className="comparison-boxes-row">
                   <div className="comparison-box sunny">
                     <p className="text-center">
-                      Other solar companies take 2-4 weeks and 3-6 calls to
-                      gather piecemeal information and revise your proposal
+                    Wallet friendly one time investment for 25 Years. Installing a solar power system will bring dividends through reduced electricity bills.
+
                     </p>
                   </div>
 
-                  <div className="vs-circle">VS </div>
+                  {/* <div className="vs-circle">VS </div> */}
 
                   <div className="comparison-box sunny">
                     <p className="text-center">
-                      <span className="highlight">With Sunny</span>, you
-                      instantly get your entire proposal, pricing, and final
-                      contract—all on demand, fully transparent, and online.
+                      Sustainable carbon-free energy solutions such as solar are crucial in achieving our climate goals and the sustainable development agenda.
                     </p>
                   </div>
                 </div>
@@ -240,7 +238,7 @@ function HomePage() {
             </div>
 
             <h2 className="timeline-heading text-center">
-              Solar without shadowy fees
+              Better Grid Security
             </h2>
 
             <div className="comparison-content">
@@ -248,26 +246,22 @@ function HomePage() {
                 <div className="comparison-boxes-row">
                   <div className="comparison-box">
                     <p className="text-center">
-                      Traditional solar companies stuff middlemen into your
-                      process so that they can bake hefty sales commissions into
-                      your price.
+                    Growing solar energy adoption eases the power grid's burden, enhancing grid security. This results in fewer power cuts and increased resilience against disasters.
                     </p>
                   </div>
 
-                  <div className="vs-circle">VS</div>
+                  {/* <div className="vs-circle">VS</div> */}
 
                   <div className="comparison-box sunny">
                     <p className="text-center">
-                      <span className="highlight">With Sunny</span>, there are
-                      no middlemen—just the lowest possible price for you,
-                      on-demand and all online.
+                      Solar production emits no harmful pollutants, making your contribution impactful in saving the environment.
                     </p>
                   </div>
                 </div>
               </div>
             </div>
             <h2 className="timeline-heading text-center">
-              24/7 Personalized Support
+              Save on electricity bills
             </h2>
 
             <div className="comparison-content">
@@ -275,18 +269,17 @@ function HomePage() {
                 <div className="comparison-boxes-row">
                   <div className="comparison-box">
                     <p className="text-center">
-                      Other companies hassle you non-stop with phone calls and
-                      text messages as they try to meet their sales quotas.
+                    Installing solar panels significantly reduces monthly electricity bills and dependence on the power grid. According to long-term
+                    forecast solar remains a cost-effective solution and long-term investment in the future.
                     </p>
                   </div>
 
-                  <div className="vs-circle">VS</div>
+                  {/* <div className="vs-circle">VS</div> */}
 
                   <div className="comparison-box sunny">
                     <p className="text-center">
-                      <span className="highlight">With Sunny</span>, our team is
-                      always online and available to meet when you want to
-                      connect. We work for you - not for commissions.
+                    Switching to solar energy is a smart and sustainable way to reduce your electricity bills while also lowering your environmental impact.
+                    Whether you choose rooftop panels, community solar, going solar is a powerful investment in both your future and the planet.
                     </p>
                   </div>
                 </div>
