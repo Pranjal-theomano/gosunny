@@ -12,7 +12,7 @@ const ChatBox = ({ exampleQuestions = [] }) => {
   const { isVisible = true, toggleVisibility = () => {} } = useUIContext() || {};
 
   const initialMessage = {
-    text: "Hi, I'm Sunny. Our team built me based on their 50 years of experience helping homeowners like you get solar. Do you have any more questions about solar leases, our installation process, or anything else?",
+    text: "Hi, I'm Chatbot. Our team built me based on their 50 years of experience helping homeowners like you get solar. Do you have any more questions about solar leases, our installation process, or anything else?",
     sender: "bot",
   };
   const [messages, setMessages] = useState([initialMessage]);

@@ -484,7 +484,7 @@ function HomePage() {
             >
               <div className="chat-widget-header">
                 <img src={logo} alt="SunnyAI" className="chat-header-logo" />
-                <h3>SunnyAI</h3>
+                <h3>CHATBOT</h3>
                 <button
                   className="chat-close-button"
                   onClick={() => setShowChatWidget(false)}
