@@ -13,7 +13,6 @@ import solarPanelImage3 from '../../assets/solar3.jpg';
 import mainlogo from '../../assets/implogo.png';
 import logo from '../../assets/logo.png';
 import headerlogo from '../../assets/header_logo.png';
-import backgroundimage2 from '../../assets/backgroundimage2.png';
 import './homepage.css';
 
 function HomePage() {

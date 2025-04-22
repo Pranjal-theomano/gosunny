@@ -9,6 +9,7 @@ const Details = ({ isOpen, onClose }) => {
     phone: '',
     address: ''
   });
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -20,6 +21,7 @@ const Details = ({ isOpen, onClose }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setIsLoading(true);
     try {
       const response = await fetch(`${process.env.REACT_APP_BASE_URL}/register_user`, {
         method: 'POST',
@@ -49,6 +51,8 @@ const Details = ({ isOpen, onClose }) => {
     } catch (error) {
       console.error('Error saving details:', error);
       alert('Failed to save details. Please try again.');
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -57,6 +61,11 @@ const Details = ({ isOpen, onClose }) => {
   return (
     <div className="modal-overlay">
       <div className="modal-content">
+        {isLoading && (
+          <div className="spinner-overlay">
+            <div className="spinner"></div>
+          </div>
+        )}
         <button className="close-button" onClick={onClose}>&times;</button>
         <h2>Provide Your Details</h2>
         <form onSubmit={handleSubmit}>
@@ -119,7 +128,9 @@ const Details = ({ isOpen, onClose }) => {
               />
             </div>
             <div className="form-group half-width submit-container">
-              <button type="submit" className="submit-btn">Submit</button>
+              <button type="submit" className="submit-btn" disabled={isLoading}>
+                Submit
+              </button>
             </div>
           </div>
         </form>
