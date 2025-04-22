@@ -295,50 +295,6 @@ function HomePage() {
           </div>
         </section>
 
-        <section
-          className="hero-form"
-          style={{ backgroundImage: `url(${backgroundimage2})` }}
-        >
-          <div className="hero-form-content">
-            <h2>Get a complete, free solar offer in less than 5 mins!</h2>
-            <p className="hero-form-subtitle">Get started below!</p>
-
-            <div className="form-container">
-              <div className="sun-icon">
-                <svg viewBox="0 0 100 100" width="80" height="80">
-                  <circle cx="50" cy="50" r="25" fill="#FFD700" />
-                  <g fill="none" stroke="#FFD700" strokeWidth="4">
-                    {[
-                      0, 30, 60, 90, 120, 150, 180, 210, 240, 270, 300, 330,
-                    ].map((angle) => (
-                      <line
-                        key={angle}
-                        x1={50 + Math.cos((angle * Math.PI) / 180) * 30}
-                        y1={50 + Math.sin((angle * Math.PI) / 180) * 30}
-                        x2={50 + Math.cos((angle * Math.PI) / 180) * 40}
-                        y2={50 + Math.sin((angle * Math.PI) / 180) * 40}
-                      />
-                    ))}
-                  </g>
-                </svg>
-              </div>
-
-              <form className="quick-form">
-                <div className="form-fields">
-                  <div className="input-group">
-                    <label>Last Month Electric Bill</label>
-                    <div className="input-with-icon">
-                      <span className="dollar-icon">$</span>
-                      <input type="number" placeholder="200" />
-                    </div>
-                  </div>
-                </div>
-
-                <button className="savings-button">See My Savings Now</button>
-              </form>
-            </div>
-          </div>
-        </section>
         <div className="wave-divider">
           {/* You might want to add an SVG wave here */}
         </div>
