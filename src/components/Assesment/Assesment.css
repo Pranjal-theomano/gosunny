@@ -180,3 +180,43 @@
     height: 120px;
   }
 }
+
+@media screen and (max-width: 768px) {
+  .mobile-stack {
+    flex-direction: column;
+  }
+
+  .content-layout {
+    padding: 1rem;
+  }
+
+  .left-column, .right-column {
+    width: 100%;
+  }
+
+  .savings-row.mobile-stack {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .mobile-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .main-heading {
+    font-size: 1.5rem;
+    padding: 1rem;
+  }
+
+  .card {
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .coverage-circle {
+    width: 150px;
+    height: 150px;
+    margin: 1rem auto;
+  }
+}

@@ -103,6 +103,7 @@ function HomePage() {
                       setFormData({ ...formData, electricBill: e.target.value })
                     }
                     required
+                    className="bill-input"
                   />
                 </div>
                 <button type="submit" disabled={isLoading} className="submit-button">
@@ -142,60 +143,66 @@ function HomePage() {
 
             <div className="benefits-cards">
               <div className="benefit-card card-1">
-                <div className="benefit-icon">
-                  <h4>
-                    <span role="img" aria-label="sun">
-                      🌞
-                    </span>{" "}
-                    Finalize your entire solar design
-                  </h4>
-                </div>
-                <div className="benefit-content">
-                  <p>
-                    With just your address and monthly bill, Sunny's team of
-                    AI-experts create a custom solar plan in minutes—
-                    <span className="highlight">
-                      no endless sales calls, no surprise changes down the road.
-                    </span>
-                  </p>
-                </div>
-
-                <div className="benefit-icon">
-                  <h4>
-                    <span role="img" aria-label="sun">
-                      🌞
-                    </span>{" "}
-                    Secure your lowest-cost financing
-                  </h4>
-                </div>
-                <div className="benefit-content">
-                  <p>
-                    You start saving in month one. Our AI finds the lowest-cost
-                    lease option, ensuring your new solar bill is always lower
-                    than your current electricity bill— plus
-                    <span className="highlight">
-                      no upfront payment required.
-                    </span>
-                  </p>
+                <div className="benefit-item">
+                  <div className="benefit-icon">
+                    <h4>
+                      <span role="img" aria-label="sun">
+                        🌞
+                      </span>{" "}
+                      Finalize your entire solar design
+                    </h4>
+                  </div>
+                  <div className="benefit-content">
+                    <p>
+                      With just your address and monthly bill, Sunny's team of
+                      AI-experts create a custom solar plan in minutes—
+                      <span className="highlight">
+                        no endless sales calls, no surprise changes down the road.
+                      </span>
+                    </p>
+                  </div>
                 </div>
 
-                <div className="benefit-icon">
-                  <h4>
-                    <span role="img" aria-label="sun">
-                      🌞
-                    </span>{" "}
-                    Schedule your installation survey!
-                  </h4>
+                <div className="benefit-item">
+                  <div className="benefit-icon">
+                    <h4>
+                      <span role="img" aria-label="sun">
+                        🌞
+                      </span>{" "}
+                      Secure your lowest-cost financing
+                    </h4>
+                  </div>
+                  <div className="benefit-content">
+                    <p>
+                      You start saving in month one. Our AI finds the lowest-cost
+                      lease option, ensuring your new solar bill is always lower
+                      than your current electricity bill— plus
+                      <span className="highlight">
+                        no upfront payment required.
+                      </span>
+                    </p>
+                  </div>
                 </div>
-                <div className="benefit-content">
-                  <p>
-                    We only work with installation partners who prioritize
-                    customer service and efficiency as much as we do. That means
-                    <span className="highlight">
-                      clear availability and quick turnarounds to getting your
-                      system up and running.
-                    </span>
-                  </p>
+
+                <div className="benefit-item">
+                  <div className="benefit-icon">
+                    <h4>
+                      <span role="img" aria-label="sun">
+                        🌞
+                      </span>{" "}
+                      Schedule your installation survey!
+                    </h4>
+                  </div>
+                  <div className="benefit-content">
+                    <p>
+                      We only work with installation partners who prioritize
+                      customer service and efficiency as much as we do. That means
+                      <span className="highlight">
+                        clear availability and quick turnarounds to getting your
+                        system up and running.
+                      </span>
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>

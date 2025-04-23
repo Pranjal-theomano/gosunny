@@ -1053,3 +1053,95 @@
   .form-group.full-width {
     width: 100%;
   }
+  
+  /* Add/update mobile responsive styles */
+  @media (max-width: 768px) {
+    .benefits-container {
+      padding: 1rem;
+      min-height: auto;
+    }
+  
+    .benefits-image {
+      position: static;
+      width: 100%;
+      height: 300px;
+      margin-bottom: 2rem;
+    }
+  
+    .benefits-cards {
+      margin-left: 0;
+      padding-top: 1rem;
+    }
+  
+    .benefit-card {
+      margin-left: 0 !important;
+      margin-top: 0 !important;
+    }
+  
+    .card-2, .card-3 {
+      margin-left: 0;
+    }
+  
+    .benefit-icon h4 {
+      font-size: 1.1rem;
+    }
+  
+    .benefit-content p {
+      font-size: 0.9rem;
+    }
+  
+    .timeline-title {
+      text-align: center;
+      font-size: 2rem;
+      margin: 1rem 0;
+    }
+  }
+
+  /* Mobile Responsive Styles - Only add new rules for mobile */
+  @media (max-width: 768px) {
+    .hero {
+      padding: 1rem;
+    }
+
+    .hero-title {
+      font-size: 2rem;
+    }
+
+    .hero-subtitle {
+      font-size: 1.5rem;
+    }
+
+    .hero-text, .hero-cta {
+      font-size: 1rem;
+    }
+
+    .input-button-wrapper {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .input-container {
+      width: 100%;
+    }
+
+    .submit-button {
+      width: 100%;
+      margin-top: 0.5rem;
+    }
+    .input-container input{
+      width: 85%;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .hero-title {
+      font-size: 1.75rem;
+    }
+
+    .hero-subtitle {
+      font-size: 1.25rem;
+    }
+    .input-container input{
+      width: 85%;
+    }
+  }

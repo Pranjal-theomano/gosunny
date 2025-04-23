@@ -17,7 +17,7 @@ const Assessment = () => {
     <div className="assessment-container">
       <h1 className="main-heading">Here's What You'll Save</h1>
       
-      <div className="content-layout">
+      <div className="content-layout mobile-stack">
         <div className="left-column">
           {/* Savings Card */}
           <div className="card savings-card">
@@ -25,7 +25,7 @@ const Assessment = () => {
             <p className="down-payment">With $0 Down Payment</p>
             
             <div className="savings-details">
-              <div className="savings-row">
+              <div className="savings-row mobile-stack">
                 <p>Electricity Savings: ${savingsData.electricitySavings.min} - ${savingsData.electricitySavings.max}</p>
                 <p className="bonus">Sign-up Bonus ${savingsData.signupBonus}</p>
               </div>
@@ -41,7 +41,7 @@ const Assessment = () => {
 
         <div className="right-column">
           {/* Stats Cards */}
-          <div className="stats-layout">
+          <div className="stats-layout mobile-grid">
             <div className="card panel-card">
               <h3>Panel Count</h3>
               <div className="number">{savingsData.panelCount}</div>

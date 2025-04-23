@@ -85,6 +85,7 @@ const Details = ({ isOpen, onClose }) => {
               <label htmlFor="lastName">Last Name</label>
               <input
                 type="text"
+                style={{width: '88%'}}
                 id="lastName"
                 name="lastName"
                 value={formData.lastName}
