@@ -1131,6 +1131,13 @@
     .input-container input{
       width: 85%;
     }
+    .get-started-btn{
+      margin-top: 38rem;
+    }
+    .chat-widget-popup{
+      width: 340px;
+      height: 450px;
+    }
   }
 
   @media (max-width: 480px) {
@@ -1143,5 +1150,8 @@
     }
     .input-container input{
       width: 85%;
+    }
+    .get-started-btn{
+      margin-top: 38rem;
     }
   }
