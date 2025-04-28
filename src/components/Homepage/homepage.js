@@ -76,7 +76,7 @@ function HomePage() {
             <a href="/" className="nav-link">
               Home
             </a>
-            <a href="/about" className="nav-link">
+            <a href="/" className="nav-link">
               About Us
             </a>
           </nav>
