@@ -22,14 +22,14 @@ const Assessment = () => {
           {/* Savings Card */}
           <div className="card savings-card">
             <h2>Estimated Year 1 Savings</h2>
-            <p className="down-payment">With $0 Down Payment</p>
+            <p className="down-payment">With INR 0 Down Payment</p>
             
             <div className="savings-details">
               <div className="savings-row mobile-stack">
-                <p>Electricity Savings: ${savingsData.electricitySavings.min} - ${savingsData.electricitySavings.max}</p>
-                <p className="bonus">Sign-up Bonus ${savingsData.signupBonus}</p>
+                <p>Electricity Savings: {savingsData.electricitySavings.min} - {savingsData.electricitySavings.max}</p>
+                <p className="bonus">Sign-up Bonus INR {savingsData.signupBonus}</p>
               </div>
-              <h2 className="total-savings">${savingsData.totalSavings.min} - ${savingsData.totalSavings.max}</h2>
+              <h2 className="total-savings">₹ {savingsData.totalSavings.min} - ₹ {savingsData.totalSavings.max}</h2>
             </div>
           </div>
 

@@ -6,13 +6,12 @@ import savings from '../../assets/saving.png';
 import maintenance from '../../assets/maintenance.png';
 import equipment from '../../assets/equipment.png';
 import price from '../../assets/bestprice.png';
-import partner from '../../assets/partner_logo.png';
 import solarPanelImage1 from '../../assets/solar1.jpg';
 import solarPanelImage2 from '../../assets/solar2.jpg';
 import solarPanelImage3 from '../../assets/solar3.jpg';
-import mainlogo from '../../assets/implogo.png';
 import logo from '../../assets/logo.png';
-import headerlogo from '../../assets/header_logo.png';
+import Theomano from '../../assets/theomano.png';
+import hawaMahal from '../../assets/Hawa_mahal2.jpeg';
 import './homepage.css';
 
 function HomePage() {
@@ -67,9 +66,9 @@ function HomePage() {
         <header className="header">
           <div className="logo">
             <img
-              src={headerlogo}
-              alt="SunnyAI"
-              style={{ height: "20px", width: "auto" }}
+              src={Theomano}
+              alt="Theomano"
+              style={{ height: "40px", width: "auto" }}
             />
           </div>
           <nav>
@@ -82,11 +81,14 @@ function HomePage() {
           </nav>
         </header>
 
-        <main className="hero">
-          <h1 className="hero-title">Choose Sunny.</h1>
+        <main className="hero" style={{
+          paddingTop: '2rem',
+          background: `linear-gradient(to bottom, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), url(${hawaMahal}) center 30%/cover`
+        }}>
+          <h1 className="hero-title">Choose Solar</h1>
           <h2 className="hero-subtitle">Because solar shouldn't be shady.</h2>
           <p className="hero-text">
-            Get a complete, free solar offer in less than 5 mins!
+            Get Details of solar offer in less than 5 mins!
           </p>
           <p className="hero-cta">Get started below!</p>
 
@@ -95,7 +97,7 @@ function HomePage() {
               <label>Last Month Electric Bill</label>
               <div className="input-button-wrapper">
                 <div className="input-container">
-                  <span className="input-icon">$</span>
+                  <span className="input-icon"></span>
                   <input
                     type="number"
                     value={formData.electricBill}
@@ -123,18 +125,18 @@ function HomePage() {
         <div className="banner">
           <div className="carousel-container">
             <div className="carousel-slide">
-              Act fast to get your $3,000 sign up bonus!
+            Turn sunshine into savings — power your life with the sun!
             </div>
             <div className="carousel-slide">
-              Act fast to get your $3,000 sign up bonus!
+            Turn sunshine into savings — power your life with the sun!
             </div>
             <div className="carousel-slide">
-              Act fast to get your $3,000 sign up bonus!
+            Turn sunshine into savings — power your life with the sun!
             </div>
           </div>
         </div>
         <section className="benefits">
-          <h2 className="timeline-title">In the next 5 mins</h2>
+          <h2 className="timeline-title">Solar Benifits in next 5 mins</h2>
 
           <div className="benefits-container">
             <div className="benefits-image">
@@ -149,16 +151,14 @@ function HomePage() {
                       <span role="img" aria-label="sun">
                         🌞
                       </span>{" "}
-                      Finalize your entire solar design
+                       Lower Electricity Bills
                     </h4>
                   </div>
                   <div className="benefit-content">
                     <p>
-                      With just your address and monthly bill, Sunny's team of
-                      AI-experts create a custom solar plan in minutes—
-                      <span className="highlight">
-                        no endless sales calls, no surprise changes down the road.
-                      </span>
+                    Solar panels allow you to generate your own electricity, significantly reducing or even eliminating your monthly utility bills.
+                     With net metering, you can also send excess power back to the grid and earn credits, 
+                      <span className="highlight"> maximizing your savings over time.</span>
                     </p>
                   </div>
                 </div>
@@ -167,19 +167,16 @@ function HomePage() {
                   <div className="benefit-icon">
                     <h4>
                       <span role="img" aria-label="sun">
-                        🌞
+                        🌍
                       </span>{" "}
-                      Secure your lowest-cost financing
+                      Environmentally Friendly
                     </h4>
                   </div>
                   <div className="benefit-content">
                     <p>
-                      You start saving in month one. Our AI finds the lowest-cost
-                      lease option, ensuring your new solar bill is always lower
-                      than your current electricity bill— plus
-                      <span className="highlight">
-                        no upfront payment required.
-                      </span>
+                    Solar energy is clean, renewable, and sustainable. It helps reduce greenhouse gas emissions, air pollution,
+                    and our dependence on fossil fuels, making it a powerful way to 
+                      <span className="highlight"> fight climate change and protect the planet for future generations.</span>
                     </p>
                   </div>
                 </div>
@@ -188,19 +185,16 @@ function HomePage() {
                   <div className="benefit-icon">
                     <h4>
                       <span role="img" aria-label="sun">
-                        🌞
+                       💰
                       </span>{" "}
-                      Schedule your installation survey!
+                      Long-Term Investment
                     </h4>
                   </div>
                   <div className="benefit-content">
                     <p>
-                      We only work with installation partners who prioritize
-                      customer service and efficiency as much as we do. That means
-                      <span className="highlight">
-                        clear availability and quick turnarounds to getting your
-                        system up and running.
-                      </span>
+                    Installing solar adds value to your property and protects you from rising energy costs. With government incentives, tax credits, 
+                    and low maintenance requirements, solar systems typically pay for themselves within a few years and 
+                      <span className="highlight"> continue generating savings for decades to come.</span>
                     </p>
                   </div>
                 </div>
@@ -225,7 +219,7 @@ function HomePage() {
             <div className="comparison-content">
               <div className="comparison-side">
                 <div className="comparison-boxes-row">
-                  <div className="comparison-box sunny">
+                  <div className="comparison-box">
                     <p className="text-center">
                     Wallet friendly one time investment for 25 Years. Installing a solar power system will bring dividends through reduced electricity bills.
 
@@ -294,11 +288,11 @@ function HomePage() {
           </div>
         </section>
 
-        <div className="wave-divider">
+        {/* <div className="wave-divider"> */}
           {/* You might want to add an SVG wave here */}
-        </div>
+        {/* </div> */}
         <section className="guarantee">
-          <h1 className="guarantee-title">Our SunnyAI Guarantee</h1>
+          <h1 className="guarantee-title">Theomano Guarantee</h1>
           <p className="guarantee-subtitle">
             From design to installation to performance, we'll always do what's
             right and guarantee your satisfaction
@@ -313,9 +307,7 @@ function HomePage() {
                 <h3>Savings Guarantee</h3>
                 <p>
                   Your system will generate the contracted
-                  <span className="highlight-teal">
-                    savings for the lifetime of your lease.
-                  </span>
+                  <span className="highlight-teal"> savings for the lifetime of your lease.</span>
                 </p>
               </div>
 
@@ -327,9 +319,7 @@ function HomePage() {
                 <p>
                   You focus on enjoying solar and savings. Our partners handle
                   all
-                  <span className="highlight-teal">
-                    maintenance, repairs, and cleaning at no additional cost.
-                  </span>
+                  <span className="highlight-teal"> maintenance, repairs, and cleaning at no additional cost.</span>
                 </p>
               </div>
             </div>
@@ -373,23 +363,6 @@ function HomePage() {
             <br />
             From permits to installation, we've got you covered.
           </p>
-
-          <div className="partner-card">
-            <div className="partner-logo">
-              <img
-                src={partner}
-                alt="Castaways Energy LLC Logo"
-                className="partner-icon"
-              />
-            </div>
-            <div className="partner-info">
-              <h3>Castaways Energy LLC.</h3>
-              <div className="partner-rating">
-                <span className="rating">5.0 ⭐</span>
-                <span>• 165 Google Reviews</span>
-              </div>
-            </div>
-          </div>
         </section>
 
         <section className="reviews">
@@ -407,7 +380,7 @@ function HomePage() {
                   <div className="review-date">4 months ago</div>
                 </div>
                 <p className="review-text">
-                  "Very professional crew. The Aquaman crew knocked out the
+                  "Very professional team. The Theomano team knocked out the
                   installation in just a few hours without sacrificing quality.
                   Job very well done."
                 </p>
@@ -426,7 +399,7 @@ function HomePage() {
                   <div className="review-date">4 months ago</div>
                 </div>
                 <p className="review-text">
-                  "The drago crew did a great job, and the attention to detail
+                  "The Theomano team did a great job, and the attention to detail
                   was a plus. Communicate with us to let us know how everything
                   works. Did a great job cleaning after themselves,
                   professionals, and friendly. Give them 10 out of 10.
@@ -446,7 +419,7 @@ function HomePage() {
                   <div className="review-rating">5.0 ⭐⭐⭐⭐⭐</div>
                   <div className="review-date">9 months ago</div>
                 </div>
-                <p className="review-text">"Nice and clean work crew!"</p>
+                <p className="review-text">"Nice and clean work Theomano team!"</p>
               </div>
             </div>
           </div>
@@ -457,16 +430,16 @@ function HomePage() {
             <div className="footer-left">
               <div className="logo">
                 <img
-                  src={mainlogo}
-                  alt="SunnyAI"
+                  src={Theomano}
+                  alt="Theomano"
                   style={{
-                    height: "30px",
+                    height: "40px",
                     width: "auto",
-                    marginRight: "180px",
+                    marginRight: "160px",
                   }}
                 />
               </div>
-              <p>© SunnyAI LLC. 2025 • Privacy & Legal</p>
+              <p>© Theomano 2025 • Privacy & Legal</p>
             </div>
             <div className="footer-right">
               <a href="/home">Home </a>
